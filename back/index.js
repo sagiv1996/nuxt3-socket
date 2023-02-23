@@ -3,11 +3,12 @@ const app = express();
 const http = require("http");
 const server = http.createServer(app);
 const WebSocket = require("ws");
+const wss = new WebSocket.Server({ server });
+
 app.get("/", (req, res) => {
-  res.status(200).send("Hello world!");
+  res.status(200).send(`Count of clietns: ${wss.clients.size.toString()}`);
 });
 
-const wss = new WebSocket.Server({ server });
 wss.on("connection", (ws) => {
   ws.on("message", (message) => {
     const parseObject = JSON.parse(message);
