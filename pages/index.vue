@@ -1,8 +1,10 @@
-<template>
-  <div>
-    <h1>Welcome to the homepage</h1>
-    <AppAlert>
-      This is an auto-imported component
-    </AppAlert>
-  </div>
+<template lang="pug">
+el-card(shadow="hover")
+    get-info-about-user(@submit-and-valid="connectToSocket")
 </template>
+
+<script setup type="ts">
+const connectToSocket = (name) => {
+    console.log(name)
+}
+</script>
