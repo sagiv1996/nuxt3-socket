@@ -1,7 +1,8 @@
 <template lang="pug">
-el-container
-  el-header Header
-  el-main
-    slot
-  el-footer Footer
+el-container(:style="{width: '500px', margin: 'auto'}")
+  el-card
+    el-main
+      slot
+    el-footer
+      center Bla Bla Bla  {{ new Date().getFullYear() }} ©
 </template>
