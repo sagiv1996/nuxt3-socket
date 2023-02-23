@@ -19,7 +19,6 @@ const sendMsg = (msg) => send(JSON.stringify({ msg, user }))
 
 const userNameIsValid = (name) => {
     user.name = name
-    open()
 }
 
 
