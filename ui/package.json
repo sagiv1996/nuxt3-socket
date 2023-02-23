@@ -9,8 +9,14 @@
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.3",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/nuxt": "^9.13.0",
     "nuxt": "^3.2.2",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0"
+  },
+  "dependencies": {
+    "@vueuse/components": "^9.13.0",
+    "uuid": "^9.0.0"
   }
 }
